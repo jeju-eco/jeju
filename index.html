@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>제주 — 아름다운 배경 예시</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="hero" role="main">
+    <!-- responsive WebP + JPG fallback을 위한 picture 사용: decorative image 이므로 alt는 비워둡니다 -->
+    <picture class="hero__bg" aria-hidden="true">
+      <!-- WebP 소스 (브라우저가 지원하면 webp 사용) -->
+      <source
+        srcset="assets/images/jeju-1600.webp 1600w, assets/images/jeju-1200.webp 1200w, assets/images/jeju-800.webp 800w"
+        type="image/webp">
+      <!-- JPG/PNG fallback -->
+      <img
+        src="assets/images/jeju-1600.jpg"
+        srcset="assets/images/jeju-1600.jpg 1600w, assets/images/jeju-1200.jpg 1200w, assets/images/jeju-800.jpg 800w"
+        sizes="100vw"
+        class="hero__img"
+        alt="">
+    </picture>
+
+    <div class="hero__overlay">
+      <h1>제주, 자연의 숨결</h1>
+      <p class="lead">푸른 바다와 한라산이 어우러진 아름다운 풍경</p>
+      <!-- 선택: 버튼 등 추가 -->
+    </div>
+  </main>
+</body>
+</html>
